@@ -19,6 +19,7 @@ if (isset($_GET['distance'])) {
 </head>
 
 <body>
+    <h2>PHP calculator</h2>
     <form method="get">
         <label for="cost">Cost per Km</label>
         <input name="cost" value="<?= $cost ?>" />
@@ -26,7 +27,6 @@ if (isset($_GET['distance'])) {
         <input name="distance" value="<?= $distance ?>" />
         <button type="submit">Get ticket cost</button>
     </form>
-    <hr>
     <?php
     require 'Cost.php';
 
@@ -38,7 +38,16 @@ if (isset($_GET['distance'])) {
         <h1>Ticket cost is {$ticketCost->get()} TJS</h1>
         HTML;
     ?>
-
+    <hr>
+    <h2>JS calculator</h2>
+    <form id="calculator">
+        <label for="cost">Cost per Km</label>
+        <input name="cost" value="0.5" />
+        <label for="distance">Distance</label>
+        <input name="distance" value="0" />
+        <button type="button" onclick="getTicketCost()">Get ticket cost</button>
+    </form>
+    <h1 id="result">Ticket cost is 0 TJS</h1>
 </body>
 
 </html>
