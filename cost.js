@@ -27,7 +27,7 @@ const getTicketCost = () => {
         totalCost += getDiscount(20) * (distance - 1999);
     }
     
-    totalCost = Math.round(totalCost, 2);
+    totalCost = Math.round((totalCost + Number.EPSILON) * 100) / 100;
 
     result.innerHTML = `Ticket cost is ${totalCost} TJS`;
 };
