@@ -16,6 +16,7 @@ if (isset($_GET['distance'])) {
 <head>
     <meta charset='utf-8'>
     <title>Ticket cost calculator</title>
+    <script src="cost.js"></script>
 </head>
 
 <body>
