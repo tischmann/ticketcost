@@ -40,11 +40,11 @@ if (isset($_GET['distance'])) {
     ?>
     <hr>
     <h2>JS calculator</h2>
-    <form id="calculator">
+    <form>
         <label for="cost">Cost per Km</label>
-        <input name="cost" value="0.5" />
+        <input name="cost" id="cost" value="0.5" />
         <label for="distance">Distance</label>
-        <input name="distance" value="0" />
+        <input name="distance" id="distance" value="0" />
         <button type="button" onclick="getTicketCost()">Get ticket cost</button>
     </form>
     <h1 id="result">Ticket cost is 0 TJS</h1>
