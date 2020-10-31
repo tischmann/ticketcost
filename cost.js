@@ -26,6 +26,8 @@ const getTicketCost = () => {
     if (distance >= 2000) {
         totalCost += getDiscount(20) * (distance - 1999);
     }
+    
+    totalCost = Math.round(totalCost, 2);
 
     result.innerHTML = `Ticket cost is ${totalCost} TJS`;
 };
